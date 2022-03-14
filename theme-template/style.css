@@ -1,0 +1,408 @@
+/*
+
+Theme Name: Killua Custom Simple
+Theme URI: https://github.com/agvenmuharisrifqi/WordpressThemeSimple
+Author: Agven Muharis Rifqi
+Author URI: https://github.com/agvenmuharisrifqi
+Description:  Killua Custom Simple is a custom theme with all the features you need to create a website. Best for business, corporate, corporate, company profile and personal portfolio. This theme has a clean and elegant design, full width/boxed layout, static/fixed header, two/three/four column footer layout. The home page consists of heroes section, services section, call to action section, news/blog section, social icons, header customization, footer widgets, etc. This theme is fully responsive and is built on a customizer which allows you to configure your website with live preview.
+Tags: blog, one-column, custom-logo, custom-menu, featured-images, threaded-comments
+Version: 1.0
+Requires at least: 5.9
+Tested up to: 5.9
+Requires PHP: 8.0
+License: MIT Licence
+License URI: https://opensource.org/licenses/MIT
+Text Domain: killuacustomsimple
+
+All files, unless otherwise stated, are released under the MIT License.
+
+Use it to make something cool, have fun, and share what you've learned with others.
+
+*/
+
+/* +--------------------+ */
+/* |    SETUP THEME     | */
+/* +--------------------+ */
+
+@import url('assets/css/variable.css');
+
+body {
+    background-color: var(--bg-secondary);
+    font-family: var(--fn-paragraf);
+    color: var(--txt-primary);
+    font-size: 16px;
+}
+
+p {
+    line-height: 1.8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--fn-heading);
+    color: var(--txt-heading);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.313rem;
+}
+
+h6 {
+    font-size: 1.125rem;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+.container {
+    width: 80%;
+    padding: 0 15px;
+    margin: auto;
+}
+
+.btn {
+    background-color: #fff;
+    font-size: 24px;
+    text-align: center;
+    padding: 0.375rem 0.5rem;
+    border-radius: 5px;
+    color: var(--bg-primary);
+    border: 1px solid var(--bg-primary);
+    background-clip: padding-box;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--bg-primary);
+    color: #fff;
+}
+
+.btn:active {
+    background-color: rgb(0, 255, 213);
+    border-color: rgb(0, 197, 164);
+    box-shadow: 0 0 0 0.1rem rgb(0, 255, 213);
+}
+
+a {
+    text-decoration: none;
+    color: var(--bg-primary);
+    cursor: pointer;
+    display: inline-block;
+}
+
+a:hover {
+    color: rgb(38, 117, 104);
+}
+
+/* +--------------------+ */
+/* |    COMMON STYLE    | */
+/* +--------------------+ */
+
+/* Awal Topbar */
+.topbar-wrapper {
+    background-color: var(--bg-primary);
+    padding: 10px 0;
+}
+
+.topbar-wrapper .topbar-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: white;
+}
+
+.topbar-content .topbar {
+    display: flex;
+    align-items: center;
+}
+
+.topbar-content .topbar .icon-topbar {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+/* Akhir Topbar */
+
+/* Awal Navbar */
+.navbar-wrapper {
+    background-color: white;
+}
+
+.navbar {
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.navbar-toggler {
+    display: none;
+    margin-right: 25px;
+}
+
+.navbar-brand {
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+
+.navbar-brand .title {
+    font-family: var(--txt-heading);
+    color: var(--bg-primary);
+}
+
+.navbar-collapse {
+    flex-grow: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    margin: 0 20px;
+}
+
+.nav-item.active {
+    font-weight: 300;
+}
+
+.form-search {
+    display: flex;
+}
+
+.form-search .btn-search {
+    margin-left: 5px;
+}
+
+/* Akhir Navbar */
+
+/* Awal Main */
+
+.frontpage,
+.blogpage {
+    padding: 50px 0;
+}
+
+.breadcrumb {
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.heading-page {
+    text-align: center;
+    font-weight: 900;
+    padding: 10px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.heading-page::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: var(--bg-primary);
+    bottom: 0;
+    left: calc(50% - 75px);
+    animation: efek-heading 3s ease-in-out infinite;
+}
+
+@keyframes efek-heading {
+    0% {
+        left: calc(50% - 75px);
+    }
+
+    50% {
+        left: calc(50% + 25px);
+    }
+
+    100% {
+        left: calc(50% - 75px);
+    }
+}
+
+.heading-page::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 150px;
+    height: 1px;
+    background: #9e9e9e;
+    bottom: 0px;
+    left: calc(50% - 75px);
+}
+
+.jumbotron {
+    width: 100%;
+    height: 550px;
+}
+
+.post-wrapper {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.post-thumbnail {
+    width: 40%;
+    margin-right: 15px;
+}
+
+.post-title {
+    display: block;
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.post-category {
+    display: block;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: var(--txt-primary);
+}
+
+.post-content {
+    text-align: justify;
+    margin-bottom: 25px;
+}
+
+.post-link {
+    display: inline-block;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+}
+
+.post-desc {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.btn-comment {
+    font-size: 14px;
+    padding: 0 10px;
+    border-radius: 20px;
+}
+
+
+/* Akhir Main */
+
+/* Awal Footer */
+
+footer {
+    position: relative;
+    background-color: white;
+    font-size: 14px;
+}
+
+.subfooter1 {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.subfooter1-1 {
+    width: 35%;
+}
+
+.subfooter1-1 p span {
+    font-weight: 700;
+}
+
+.subfooter1-2 {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subfooter1-2 .header-footer {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.subfooter1-2 li {
+    list-style: disc;
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+
+.subfooter1-3 {
+    display: flex;
+    justify-content: flex-end;
+    width: 35%;
+}
+
+.subfooter1-3 figcaption {
+    color: #9e9e9e;
+}
+
+.subfooter1-3 figcaption::before {
+    content: '— ';
+}
+
+.subfooter2 {
+    padding: 10px 0;
+}
+
+.menu-footer {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.menu-footer .footer-link {
+    margin: 0px 20px 10px;
+}
+
+.copyright-footer {
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Akhir Footer */

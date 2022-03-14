@@ -1,0 +1,8 @@
+:root {
+    --bg-secondary: #f2f3f5;
+    --bg-primary: rgb(0, 197, 164);
+    --fn-paragraf: "Roboto", helvetica, arial, sans-serif;
+    --fn-heading: "Catamaran", helvetica, arial, sans-serif;
+    --txt-primary: #2a2d30;
+    --txt-heading: #16181a;
+}

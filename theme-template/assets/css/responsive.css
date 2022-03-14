@@ -1,0 +1,138 @@
+@media (max-width: 992px) {
+
+    /* +--------------------+ */
+    /* |    SETUP THEME     | */
+    /* +--------------------+ */
+
+    /* +--------------------+ */
+    /* |    COMMON STYLE    | */
+    /* +--------------------+ */
+
+    .topbar-wrapper {
+        position: relative;
+        z-index: 2;
+    }
+
+    i.navbar-toggler {
+        display: block;
+        position: relative;
+        z-index: 2;
+    }
+
+    .navbar-brand {
+        position: relative;
+        z-index: 2;
+    }
+
+
+    div.navbar-collapse {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        height: 90%;
+        width: 350px;
+        max-width: 100%;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 25px;
+        background-color: white;
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: all 1s;
+        z-index: 1;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+        flex-grow: 1;
+        justify-content: space-evenly;
+        order: 2;
+    }
+
+    .form-search {
+        margin-top: 100px;
+    }
+
+    div#navbar-mobile.navbar-collapse.slider {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .subfooter1 {
+        flex-direction: column;
+    }
+
+    div.subfooter1-1,
+    div.subfooter1-2,
+    div.subfooter1-3 {
+        width: 100%;
+    }
+
+    div.subfooter1-2 {
+        align-items: flex-start;
+    }
+
+    div.subfooter1-3 {
+        justify-content: flex-start;
+    }
+
+    .subfooter1-1,
+    .subfooter1-2 {
+        margin-bottom: 25px;
+        position: relative;
+        padding-bottom: 25px;
+    }
+
+    .subfooter1-1::after,
+    .subfooter1-2::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        background-color: #9e9e9e;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* +--------------------+ */
+    /* |    SETUP THEME     | */
+    /* +--------------------+ */
+
+    .container {
+        width: 90%;
+    }
+
+    /* +--------------------+ */
+    /* |    COMMON STYLE    | */
+    /* +--------------------+ */
+    .post-wrapper {
+        flex-direction: column;
+    }
+
+    img.post-thumbnail {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+}
+
+@media (max-width: 542px) {
+
+    /* +--------------------+ */
+    /* |    SETUP THEME     | */
+    /* +--------------------+ */
+    .container {
+        width: 100%;
+    }
+
+    /* +--------------------+ */
+    /* |    COMMON STYLE    | */
+    /* +--------------------+ */
+}
